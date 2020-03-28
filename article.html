@@ -112,5 +112,44 @@
       </figure>
     </amp-carousel>
 
+    <figure class="figure">
+      <amp-iframe src="https://www.google.us/trends/embed/US_cu_82I1CVMBAACV6M_en/horserace_chart_3c6cdb21-e1eb-4412-9c28-707c3638ea35?hl=en&template=fe"
+        title="Interactive chart displaying 2016 Oscar Best Picture search interest by date"
+        height="360"
+        layout="fixed-height"
+        frameborder="0"
+        sandbox="allow-scripts allow-same-origin">
+        <amp-img src="/static/samples/img/oscars_placeholder_1.png"
+          layout="fixed-height"
+          height="360"
+          width="auto"
+          placeholder>
+        </amp-img>
+      </amp-iframe>
+      <figcaption>An interactive chart - in AMP!</figcaption>
+    </figure>
+
+    <amp-list width="300"
+      height="75"
+      layout="responsive"
+      src="/static/samples/json/related_articles.json"
+      binding="no">
+      <template type="amp-mustache">
+        <a class="related"
+          href="{{url}}">
+          <amp-img width="101"
+            height="75"
+            src="{{thumbnail}}"></amp-img><span>{{title}}</span>
+        </a>
+      </template>
+    </amp-list>
+
+    <amp-user-notification class="cookie-disclaimer"
+      layout="nodisplay"
+      id="amp-user-notification1">
+      This page might use cookies if your analytics vendor requires them.
+      <button on="tap:amp-user-notification1.dismiss">Accept</button>
+    </amp-user-notification>
+
   </body>
 </html>
