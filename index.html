@@ -107,20 +107,22 @@
     <script async custom-element="amp-dailymotion" src="https://cdn.ampproject.org/v0/amp-dailymotion-0.1.js"></script>
     <script async custom-element="amp-brid-player" src="https://cdn.ampproject.org/v0/amp-brid-player-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 
   </head>
   <body>
-    <amp-accordion>
-      <section>
-        <h4>SECTION_TITLE</h4>
-        <div>CONTENT</div>
-      </section>
-      <section>
-        <h4>SECTION_TITLE</h4>
-        <div>CONTENT</div>
-      </section>
-    </amp-accordion>
-    
+    <amp-video controls
+      width="640"
+      height="360"
+      layout="responsive"
+      poster="thumbnail.png">
+      <source src="video.mp4"
+        type="video/mp4" alt="video.mp4" />
+      <div fallback>
+        <p>This browser does not support the video element.</p>
+      </div>
+    </amp-video>
+
     <h1>The Toronto Wildcats defeat the San Jose Stars 4-2</h1>
     <amp-img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Ice_Hockey_sharks_ducks.jpg" alt="Lorem Ipsum?" height="614" width="922"></amp-img>
     <p>
